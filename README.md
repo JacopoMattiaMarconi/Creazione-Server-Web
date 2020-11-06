@@ -47,7 +47,10 @@ per installare pacchetto ssh per connessione remota
 >systemctl reload apache2
 >
 >sudo a2ensite 001-deafult.conf
-
+>
+>cd /etc/var/
+>
+>nano SitoA --> html
 
 5. SITO B
 
