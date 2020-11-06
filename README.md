@@ -22,17 +22,17 @@
 >
 --> mettere la scheda di rete in bridge
 >
-> 'network:'
+> `network:`
 >
-> 'version: 2'
+> `version: 2`
 >
-> 'renderer: networkd'
+> `renderer: networkd`
 >
-> 'ethernets:'
+> `ethernets:`
 >
-> '  enp0s3:'
+> `  enp0s3:`
 >
-> '    dhcp4: yes'
+> `    dhcp4: yes`
 >
 >sudo netpaln try
 >
