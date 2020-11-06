@@ -85,6 +85,7 @@
 
 7. Windows
 >System32\drivers\etc\hosts
+>
 >#192.168.1.28  localhost
 
 
