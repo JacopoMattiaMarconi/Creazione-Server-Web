@@ -1,23 +1,21 @@
 # Creazione-Server-Web
-//apache2
+## apache2
 
-
+1. installare apache2 + openssh-server
+>sudo apt update
+>
 >sudo apt-get install apache2
 >
-per installare apache2
+>sudo apt install openssh-server
 
-
->cd /etc/apache2adminuser ls -l
+2. controllare che vengano gestiti i file dentro determinate cartelle
+>cd /etc/apache2/apache2.conf
 >
-controllare che vengano gestiti i file dentro determinate cartelle
-
 --> <Directory /var/www/> ... </Directory>
 
-
+3. modificare impostazioni di rete
 >cd /etc/netplan/00-installer-config.yaml
 >
-modificare impostazioni di rete
-
 --> mettere la scheda di rete in bridge
 
 
