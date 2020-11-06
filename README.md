@@ -50,9 +50,11 @@
 >
 >sudo a2ensite 001-deafult.conf
 >
->cd /etc/var/
+>cd /var/www/
 >
->nano SitoA --> html
+>sudo mkdir SitoA
+>
+>cd /var/www/SitoA
 
 5. SITO B
 >cd /etc/apache2/sites-available
@@ -61,12 +63,17 @@
 >
 >sudo nano 002-deafult.conf
 >
->DocumentRoot /var/www/SitoA
+>DocumentRoot /var/www/SitoB
 >
 >systemctl reload apache2
 >
 >sudo a2ensite 002-deafult.conf
-
+>
+>cd /var/www/
+>
+>sudo mkdir SitoB
+>
+>cd /var/www/SitoB
 
 6. SITO C
 >cd /etc/apache2/sites-available
@@ -80,6 +87,12 @@
 >systemctl reload apache2
 >
 >sudo a2ensite 003-deafult.conf
+>
+>cd /var/www/
+>
+>sudo mkdir SitoC
+>
+>cd /var/www/SitoC
 
 --------------------------------------------------------------------
 
