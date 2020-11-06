@@ -8,21 +8,30 @@
 >
 >sudo apt install openssh-server
 
+---------------------------------------------------------------------
+
 2. controllare che vengano gestiti i file dentro determinate cartelle
 >cd /etc/apache2/apache2.conf
 >
 --> <Directory /var/www/> ... </Directory>
 
+---------------------------------------------------------------------
+
 3. modificare impostazioni di rete
 >cd /etc/netplan/00-installer-config.yaml
 >
 --> mettere la scheda di rete in bridge
-
-
+> 'network:'
+> 'version: 2'
+> 'renderer: networkd'
+> 'ethernets:'
+> '  enp0s3:'
+> '    dhcp4: yes'
+>
 >sudo netpaln try 
+>ip address
 
-per salvare le impostazioni
-
+---------------------------------------------------------------------
 
 >sudo apt-get install openssh-server
 
