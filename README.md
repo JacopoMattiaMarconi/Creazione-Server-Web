@@ -10,17 +10,15 @@
 
 ---------------------------------------------------------------------
 
-2. controllare che vengano gestiti i file dentro determinate cartelle
+2. controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/> ... </Directory>
 >cd /etc/apache2/apache2.conf
 >
---> <Directory /var/www/> ... </Directory>
 
 ---------------------------------------------------------------------
 
-3. modificare impostazioni di rete
+3. modificare impostazioni di rete, scheda di rete in bridge
 >cd /etc/netplan/00-installer-config.yaml
->
---> mettere la scheda di rete in bridge
+
 >     network:
 >
 >       version: 2
@@ -39,18 +37,9 @@
 
 ---------------------------------------------------------------------
 
->sudo apt-get install openssh-server
-
-per installare pacchetto ssh per connessione remota
-
-
->sudo apt install net-tools
->
->cd /etc/apache2/sites-available
-
-
 4. SITO A
-
+>cd /etc/apache2/sites-available
+>
 >sudo cp 000-deafult.conf 001-deafult.conf
 >
 >sudo nano 001-deafult.conf
@@ -66,7 +55,8 @@ per installare pacchetto ssh per connessione remota
 >nano SitoA --> html
 
 5. SITO B
-
+>cd /etc/apache2/sites-available
+>
 >sudo cp 000-deafult.conf 002-deafult.conf
 >
 >sudo nano 002-deafult.conf
@@ -78,8 +68,9 @@ per installare pacchetto ssh per connessione remota
 >sudo a2ensite 002-deafult.conf
 
 
-6.SITO C
-
+6. SITO C
+>cd /etc/apache2/sites-available
+>
 >sudo cp 000-deafult.conf 003-deafult.conf
 >
 >sudo nano 003-deafult.conf
@@ -89,3 +80,15 @@ per installare pacchetto ssh per connessione remota
 >systemctl reload apache2
 >
 >sudo a2ensite 003-deafult.conf
+
+--------------------------------------------------------------------
+
+7. Windows
+>System32\drivers\etc\hosts
+>#192.168.1.28  localhost
+
+
+
+
+
+
