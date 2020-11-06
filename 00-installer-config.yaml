@@ -1,0 +1,9 @@
+network:
+  ethernets:
+    enp0s3:
+      addresses: [172.16.29.101/16]
+      gateway4: 172.16.1.7
+      nameservers:
+        search: [virtual.marconi]
+        addresses: [172.16.1.18, 172.16.1.10] 
+  version: 2
