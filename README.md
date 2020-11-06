@@ -1,5 +1,5 @@
 # Creazione-Server-Web
-#apache2
+//apache2
 
 sudo apt-get install apache2
 per installare apache2
