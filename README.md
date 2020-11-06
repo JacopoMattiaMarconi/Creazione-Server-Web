@@ -21,14 +21,21 @@
 >cd /etc/netplan/00-installer-config.yaml
 >
 --> mettere la scheda di rete in bridge
+>
 > 'network:'
+>
 > 'version: 2'
+>
 > 'renderer: networkd'
+>
 > 'ethernets:'
+>
 > '  enp0s3:'
+>
 > '    dhcp4: yes'
 >
->sudo netpaln try 
+>sudo netpaln try
+>
 >ip address
 
 ---------------------------------------------------------------------
