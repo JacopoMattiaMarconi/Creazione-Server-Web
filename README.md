@@ -39,13 +39,13 @@ per installare pacchetto ssh per connessione remota
 4. SITO A
 
 >sudo cp 000-deafult.conf 001-deafult.conf
-
+>
 >sudo nano 001-deafult.conf
-
+>
 >DocumentRoot /var/www/SitoA
-
+>
 >systemctl reload apache2
-
+>
 >sudo a2ensite 001-deafult.conf
 
 
