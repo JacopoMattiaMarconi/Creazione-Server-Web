@@ -22,9 +22,7 @@
 >
 --> mettere la scheda di rete in bridge
 >
->
 >  network:              
->
 >
 >  version: 2            
 >
@@ -32,8 +30,10 @@
 >
 >  ethernets:
 >
+
 >    enp0s3:
 >
+
 >      dhcp4: yes
 >
 
