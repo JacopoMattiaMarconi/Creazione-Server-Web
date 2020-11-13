@@ -1,5 +1,5 @@
-# Controllare che tutte le modifiche apportate siano correttamente eseguite
-## apache2 :rocket
+# Controllare che tutte le modifiche apportate siano correttamente eseguite :rocket:
+## apache2
 
 1. controllare l'esatta modifica delle impostazioni di rete
 >ip address
