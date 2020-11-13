@@ -54,7 +54,7 @@
 >
 >       CustomLog /var/www/SitoA/log/access.log combined
 >
->systemctl reload apache2
+>sudo systemctl reload apache2
 >
 >sudo a2ensite 001-default.conf
 >
@@ -82,7 +82,7 @@
 >
 >       CustomLog /var/www/SitoB/log/access.log combined
 >
->systemctl reload apache2
+>sudo systemctl reload apache2
 >
 >sudo a2ensite 002-default.conf
 >
@@ -110,7 +110,7 @@
 >
 >       CustomLog /var/www/SitoC/log/access.log combined
 >
->systemctl reload apache2
+>sudo systemctl reload apache2
 >
 >sudo a2ensite 003-default.conf
 >
