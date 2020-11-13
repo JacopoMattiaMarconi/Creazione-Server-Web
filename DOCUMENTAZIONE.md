@@ -1,4 +1,4 @@
-# Creazione-Server-Web su macchina virtuale con Linux Ubuntu Server :moon: :thunder:
+# Creazione-Server-Web su macchina virtuale con Linux Ubuntu Server :moon: :thunderbolt:
 ## apache2
 
 1. INSTALLARE APACHE2, OPENSSH-SERVER, VSTPD (per comandi FTP con FileZilla)
