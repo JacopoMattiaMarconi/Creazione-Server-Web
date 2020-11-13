@@ -18,3 +18,11 @@
 3. controllo finale su raggiungimento sitoX
 >digitare sul browser sitoa-101.virtual.marconi
 >
+
+--------------------------------------------------------------
+
+4. controllare inserimento corretto per accesso unico alla cartella SitoA
+>exit
+>
+>         accedere con user e passwd insirite
+>
