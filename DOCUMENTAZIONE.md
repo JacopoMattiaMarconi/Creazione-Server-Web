@@ -122,9 +122,18 @@
 >
 >sudo nano Index.html
 >
+
 --------------------------------------------------------------------
 
-7. Windows (SE SI USA CONFIGURAZIONE DHCP4)
+7. CREARE UN UTENTE PER ACCESSO UNICO ALLA CARTELLA SitoA o SitoB o SitoC
+>sudo useradd -s /bin/bash -d /var/www/SitoA -m usersitoX
+>
+>sudo passwd usersitoX
+>
+
+--------------------------------------------------------------------
+
+8. Windows (SE SI USA CONFIGURAZIONE DHCP4)
 >System32\drivers\etc\hosts
 >
 >#192.168.1.28  localhost
