@@ -18,7 +18,7 @@
 
 ---------------------------------------------------------------------
 
-3. modificare impostazioni di rete, scheda di rete in bridge
+3. modificare impostazioni di rete, scheda di rete in bridge (CONFIGURAZIONE DHCP4)
 >cd /etc/netplan/00-installer-config.yaml
 
 >     network:
@@ -124,7 +124,7 @@
 >
 --------------------------------------------------------------------
 
-7. Windows
+7. Windows (SE SI USA CONFIGURAZIONE DHCP4)
 >System32\drivers\etc\hosts
 >
 >#192.168.1.28  localhost
