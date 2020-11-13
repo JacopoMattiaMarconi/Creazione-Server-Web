@@ -1,14 +1,14 @@
 # Creazione-Server-Web su macchina virtuale con Linux Ubuntu Server :moon:
 ## apache2
 
-1. INSTALLARE APACHE2, OPENSSH-SERVER, VSTPD (per comandi FTP con FileZilla)
+1. INSTALLARE APACHE2, OPENSSH-SERVER, VSFTPD (per comandi FTP con FileZilla)
 >sudo apt update
 >
 >sudo apt-get install apache2
 >
 >sudo apt install openssh-server
 >
->sudo apt-get install vstpd
+>sudo apt-get install vsftpd
 
 ---------------------------------------------------------------------
 
@@ -133,7 +133,63 @@
 
 --------------------------------------------------------------------
 
-8. Windows (SE SI USA CONFIGURAZIONE DHCP4)
+8. CONFIGURARE FILE VSFTP
+>sudo nano /etc/vsftpd.conf
+>
+
+>
+>     listen=yes
+>
+>     listen_ipv6=NO
+>
+>     anonymous_enable=NO
+>
+>     local_enable=YES
+>
+>     write_enable=YES
+>
+>     local_umask=022
+>
+>     dirmessage_enable=YES
+>
+>     use_localtime=YES
+>
+>     xferlog_enable=YES
+>
+>     connect_from_port_20=YES
+>
+>     xferlog_file=/var/log/vsftpd.log
+>
+>     xferlog_std_format=YES
+>
+>     ftpd_banner=Welcome to our  FTP service.
+>
+>     chroot_local_user=YES
+>
+>     local_root=/var/www/$USER
+>
+>     user_sub_token=$USER
+>
+>     allow_writeable_chroot=YES
+>
+>     secure_chroot_dir=/var/run/vsftpd/empty
+>
+>     pam_service_name=vsftpd
+>
+>     rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+>
+>     rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+>
+>     ssl_enable=NO
+>
+>     session_support=YES
+>
+>     log_ftp_protocol=YES
+>
+
+-------------------------------------------------------------
+
+9. Windows (SE SI USA CONFIGURAZIONE DHCP4)
 >System32\drivers\etc\hosts
 >
 >#192.168.1.28  localhost
