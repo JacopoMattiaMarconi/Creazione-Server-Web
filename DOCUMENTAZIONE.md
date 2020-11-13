@@ -1,16 +1,18 @@
-# Creazione-Server-Web
+# Creazione-Server-Web su macchina virtuale con Linux Ubuntu Server
 ## apache2
 
-1. installare apache2 + openssh-server
+1. INSTALLARE APACHE2, OPENSSH-SERVER, VSTPD (per comandi FTP con FileZilla)
 >sudo apt update
 >
 >sudo apt-get install apache2
 >
 >sudo apt install openssh-server
+>
+>sudo apt-get install vstpd
 
 ---------------------------------------------------------------------
 
-2. controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/> ... </Directory>
+2. controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
 >cd /etc/apache2/apache2.conf
 >
 
@@ -40,60 +42,86 @@
 4. SITO A
 >cd /etc/apache2/sites-available
 >
->sudo cp 000-deafult.conf 001-deafult.conf
+>sudo cp 000-deafult.conf 001-default.conf
 >
 >sudo nano 001-deafult.conf
 >
->DocumentRoot /var/www/SitoA
+>       DocumentRoot /var/www/SitoA/web
+>
+>       ServerName sitoa-101.virtual.marconi
+>
+>       ErrorLog /var/www/SitoA/log/error.log
+>
+>       CustomLog /var/www/SitoA/log/access.log combined
 >
 >systemctl reload apache2
 >
->sudo a2ensite 001-deafult.conf
+>sudo a2ensite 001-default.conf
 >
 >cd /var/www/
 >
 >sudo mkdir SitoA
 >
->cd /var/www/SitoA
+>cd /var/www/SitoA/web/
+>
+>sudo nano Index.html
+>
 
 5. SITO B
 >cd /etc/apache2/sites-available
 >
->sudo cp 000-deafult.conf 002-deafult.conf
+>sudo cp 000-deafult.conf 002-default.conf
 >
 >sudo nano 002-deafult.conf
 >
->DocumentRoot /var/www/SitoB
+>       DocumentRoot /var/www/SitoB/web
+>
+>       ServerName sitob-101.virtual.marconi
+>
+>       ErrorLog /var/www/SitoB/log/error.log
+>
+>       CustomLog /var/www/SitoB/log/access.log combined
 >
 >systemctl reload apache2
 >
->sudo a2ensite 002-deafult.conf
+>sudo a2ensite 002-default.conf
 >
 >cd /var/www/
 >
 >sudo mkdir SitoB
 >
->cd /var/www/SitoB
+>cd /var/www/SitoB/web/
+>
+>sudo nano Index.html
+>
 
 6. SITO C
 >cd /etc/apache2/sites-available
 >
->sudo cp 000-deafult.conf 003-deafult.conf
+>sudo cp 000-deafult.conf 003-default.conf
 >
 >sudo nano 003-deafult.conf
 >
->DocumentRoot /var/www/SitoC
+>       DocumentRoot /var/www/SitoC/web
+>
+>       ServerName srv-101.virtual.marconi
+>
+>       ErrorLog /var/www/SitoC/log/error.log
+>
+>       CustomLog /var/www/SitoC/log/access.log combined
 >
 >systemctl reload apache2
 >
->sudo a2ensite 003-deafult.conf
+>sudo a2ensite 003-default.conf
 >
 >cd /var/www/
 >
 >sudo mkdir SitoC
 >
->cd /var/www/SitoC
-
+>cd /var/www/SitoB/web/
+>
+>sudo nano Index.html
+>
 --------------------------------------------------------------------
 
 7. Windows
