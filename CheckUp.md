@@ -20,6 +20,8 @@
 >
 >apache2 is not active -> sudo systemctl enable apache2
 >
+>cat /var/log/syslog
+>
 >history | grep enable
 >
 >sudo systemctl restart apache2.service
