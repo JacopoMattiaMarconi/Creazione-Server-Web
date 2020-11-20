@@ -12,13 +12,7 @@
 
 ---------------------------------------------------------------------
 
-2. controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
->cd /etc/apache2/apache2.conf
->
-
----------------------------------------------------------------------
-
-3. modificare impostazioni di rete, scheda di rete in bridge (CONFIGURAZIONE DHCP4)
+2. modificare impostazioni di rete, scheda di rete in bridge
 >cd /etc/netplan/00-installer-config.yaml
 
 >
@@ -39,13 +33,25 @@
 
 ---------------------------------------------------------------------
 
-4. CREARE UN UTENTE PER ACCESSO UNICO ALLA CARTELLA SitoA o SitoB o SitoC
+3. CREARE UN UTENTE PER ACCESSO UNICO ALLA CARTELLA SitoA o SitoB o SitoC
 >sudo useradd -s /bin/bash -d /var/www/SitoX -m usersitoX
 >
 >sudo passwd usersitoX
 >
+>sudo mkdir /var/www/ SitoA
+>
+>sudo mkdir /var/www/ SitoB
+>
+>sudo mkdir /var/www/ SitoC
+>
 
 --------------------------------------------------------------------
+
+4. controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
+>cd /etc/apache2/apache2.conf
+>
+
+---------------------------------------------------------------------
 
 5. SITO A
 >cd /etc/apache2/sites-available
@@ -54,15 +60,13 @@
 >
 >sudo nano 001-deafult.conf
 >
->       DocumentRoot /var/www/SitoA/web
+>       DocumentRoot /var/www/SitoA
 >
 >       ServerName sitoa-113.virtual.marconi
 >
 >       ErrorLog /var/www/SitoA/log/error.log
 >
 >       CustomLog /var/www/SitoA/log/access.log combined
->
->sudo mkdir /var/www/ SitoA
 >
 >sudo mkdir /var/www/SitoA log
 >
@@ -82,15 +86,13 @@
 >
 >sudo nano 002-deafult.conf
 >
->       DocumentRoot /var/www/SitoB/web
+>       DocumentRoot /var/www/SitoB
 >
 >       ServerName sitob-113.virtual.marconi
 >
 >       ErrorLog /var/www/SitoB/log/error.log
 >
 >       CustomLog /var/www/SitoB/log/access.log combined 
->
->sudo mkdir /var/www/ SitoB
 >
 >sudo mkdir /var/www/SitoB log
 >
@@ -110,15 +112,13 @@
 >
 >sudo nano 003-deafult.conf
 >
->       DocumentRoot /var/www/SitoC/web
+>       DocumentRoot /var/www/SitoC
 >
 >       ServerName ubuntu-srv113.virtual.marconi
 >
 >       ErrorLog /var/www/SitoC/log/error.log
 >
 >       CustomLog /var/www/SitoC/log/access.log combined
->
->sudo mkdir /var/www/ SitoC
 >
 >sudo mkdir /var/www/SitoC log
 >
