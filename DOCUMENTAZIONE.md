@@ -48,7 +48,7 @@
 >
 >       DocumentRoot /var/www/SitoA/web
 >
->       ServerName sitoa-101.virtual.marconi
+>       ServerName sitoa-113.virtual.marconi
 >
 >       ErrorLog /var/www/SitoA/log/error.log
 >
@@ -76,7 +76,7 @@
 >
 >       DocumentRoot /var/www/SitoB/web
 >
->       ServerName sitob-101.virtual.marconi
+>       ServerName sitob-113.virtual.marconi
 >
 >       ErrorLog /var/www/SitoB/log/error.log
 >
@@ -104,7 +104,7 @@
 >
 >       DocumentRoot /var/www/SitoC/web
 >
->       ServerName srv-101.virtual.marconi
+>       ServerName ubuntu-srv113.virtual.marconi
 >
 >       ErrorLog /var/www/SitoC/log/error.log
 >
