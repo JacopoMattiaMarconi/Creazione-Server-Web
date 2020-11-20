@@ -70,13 +70,11 @@
 >
 
 >
->...
 >       <>Directory /var/www/>
 >            Options Indexes FollowSymLinks
 >            AllowOverride None
 >            Require all granted
 >       </Directory>
->...
 >
 
 ---------------------------------------------------------------------
