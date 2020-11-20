@@ -31,25 +31,15 @@
 
 >
 >     [sudo] password for adminuser:
->
 >     Warning: Stopping systemd-networkd.service, but it can still be activated by:
->
 >       systemd-networkd.socket
->
 >     Do you want to keep these settings?
->
->
->
 >
 >
 >     Press ENTER before the timeout to accept the new configuration
 >
 >
->
->
->
 >     Changes will revert in 119 seconds
->
 >     Configuration accepted.
 >
 
@@ -77,6 +67,16 @@
 
 5. controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
 >cd /etc/apache2/apache2.conf
+>
+
+>
+>...
+><>Directory /var/www/>
+>       Options Indexes FollowSymLinks
+>        AllowOverride None
+>        Require all granted
+></Directory>
+>...
 >
 
 ---------------------------------------------------------------------
