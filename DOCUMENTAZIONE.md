@@ -62,6 +62,8 @@
 >
 >sudo mkdir SitoA
 >
+>sudo mkdir log
+>
 >cd /var/www/SitoA/web/
 >
 >sudo nano Index.html
@@ -90,6 +92,8 @@
 >
 >sudo mkdir SitoB
 >
+>sudo mkdir log
+>
 >cd /var/www/SitoB/web/
 >
 >sudo nano Index.html
@@ -117,6 +121,8 @@
 >cd /var/www/
 >
 >sudo mkdir SitoC
+>
+>sudo mkdir log
 >
 >cd /var/www/SitoB/web/
 >
