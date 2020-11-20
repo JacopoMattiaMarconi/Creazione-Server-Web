@@ -62,7 +62,11 @@
 >
 >sudo mkdir SitoA
 >
+>cd /var/www/SitoA
+>
 >sudo mkdir log
+>
+>sudo mkdir web
 >
 >cd /var/www/SitoA/web/
 >
@@ -92,7 +96,11 @@
 >
 >sudo mkdir SitoB
 >
+>cd /var/www/SitoB
+>
 >sudo mkdir log
+>
+>sudo mkdir web
 >
 >cd /var/www/SitoB/web/
 >
@@ -122,7 +130,11 @@
 >
 >sudo mkdir SitoC
 >
+>cd /var/www/SitoC
+>
 >sudo mkdir log
+>
+>sudo mkdir web
 >
 >cd /var/www/SitoB/web/
 >
