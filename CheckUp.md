@@ -16,7 +16,9 @@
 --------------------------------------------------------------
 
 3. controllo finale su raggiungimento sitoX
->digitare sul browser sitoa-101.virtual.marconi
+>digitare sul browser sitoa-113.virtual.marconi
+>
+>apache2 is not active -> sudo systemctl enable apache2
 >
 
 --------------------------------------------------------------
