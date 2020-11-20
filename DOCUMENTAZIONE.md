@@ -28,7 +28,31 @@
 >
 
 >sudo netpaln try
+
 >
+>     [sudo] password for adminuser:
+>
+>     Warning: Stopping systemd-networkd.service, but it can still be activated by:
+>
+>       systemd-networkd.socket
+>
+>     Do you want to keep these settings?
+>
+>
+>
+>
+>
+>     Press ENTER before the timeout to accept the new configuration
+>
+>
+>
+>
+>
+>     Changes will revert in 119 seconds
+>
+>     Configuration accepted.
+>
+
 >ip address
 
 ---------------------------------------------------------------------
@@ -38,6 +62,10 @@
 >
 >sudo passwd usersitoX
 >
+
+---------------------------------------------------------------------
+
+4. CREARE SPAZIO SITI
 >sudo mkdir /var/www/ SitoA
 >
 >sudo mkdir /var/www/ SitoB
@@ -47,13 +75,13 @@
 
 --------------------------------------------------------------------
 
-4. controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
+5. controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
 >cd /etc/apache2/apache2.conf
 >
 
 ---------------------------------------------------------------------
 
-5. SITO A
+6. SITO A
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 001-default.conf
@@ -79,7 +107,7 @@
 >sudo a2ensite 001-default.conf
 >
 
-6. SITO B
+7. SITO B
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 002-default.conf
@@ -105,7 +133,7 @@
 >sudo a2ensite 002-default.conf
 >
 
-7. SITO C
+8. SITO C
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 003-default.conf
@@ -133,7 +161,7 @@
 
 --------------------------------------------------------------------
 
-8. CONFIGURARE FILE VSFTP
+9. CONFIGURARE FILE VSFTP
 >sudo nano /etc/vsftpd.conf
 >
 
@@ -189,7 +217,7 @@
 
 -------------------------------------------------------------
 
-9. Windows (SE SI USA CONFIGURAZIONE DHCP4)
+10. Windows (SE SI USA CONFIGURAZIONE DHCP4)
 >System32\drivers\etc\hosts
 >
 >#192.168.1.28  localhost
