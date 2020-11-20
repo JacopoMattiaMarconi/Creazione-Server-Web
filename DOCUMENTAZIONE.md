@@ -21,17 +21,17 @@
 3. modificare impostazioni di rete, scheda di rete in bridge (CONFIGURAZIONE DHCP4)
 >cd /etc/netplan/00-installer-config.yaml
 
->     network:
 >
+>     network:
+>       ethernets:
+>         enp0s3:
+>           addresses: [172.16.29.113/16]
+>           gateway4: 172.16.1.7
+>           nameservers:
+>             search: [virtual.marconi]
+>             addresses: [172.16.1.18, 172.16.1.10] 
 >       version: 2
 >
->       renderer: networkd
->
->       ethernets:
->
->         enp0s3:
->
->           dhcp4: yes
 
 >sudo netpaln try
 >
