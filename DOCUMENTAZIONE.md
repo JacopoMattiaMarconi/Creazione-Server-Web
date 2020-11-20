@@ -39,7 +39,15 @@
 
 ---------------------------------------------------------------------
 
-4. SITO A
+4. CREARE UN UTENTE PER ACCESSO UNICO ALLA CARTELLA SitoA o SitoB o SitoC
+>sudo useradd -s /bin/bash -d /var/www/SitoX -m usersitoX
+>
+>sudo passwd usersitoX
+>
+
+--------------------------------------------------------------------
+
+5. SITO A
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 001-default.conf
@@ -54,26 +62,20 @@
 >
 >       CustomLog /var/www/SitoA/log/access.log combined
 >
+>sudo mkdir /var/www/ SitoA
+>
+>sudo mkdir /var/www/SitoA log
+>
+>sudo mkdir /var/www/SitoA web
+>
+>sudo nano /var/www/SitoA/index.html
+>
 >sudo systemctl reload apache2
 >
 >sudo a2ensite 001-default.conf
 >
->cd /var/www/
->
->sudo mkdir SitoA
->
->cd /var/www/SitoA
->
->sudo mkdir log
->
->sudo mkdir web
->
->cd /var/www/SitoA/web/
->
->sudo nano Index.html
->
 
-5. SITO B
+6. SITO B
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 002-default.conf
@@ -86,28 +88,22 @@
 >
 >       ErrorLog /var/www/SitoB/log/error.log
 >
->       CustomLog /var/www/SitoB/log/access.log combined
+>       CustomLog /var/www/SitoB/log/access.log combined 
+>
+>sudo mkdir /var/www/ SitoB
+>
+>sudo mkdir /var/www/SitoB log
+>
+>sudo mkdir /var/www/SitoB web
+>
+>sudo nano /var/www/SitoB/index.html
 >
 >sudo systemctl reload apache2
 >
 >sudo a2ensite 002-default.conf
 >
->cd /var/www/
->
->sudo mkdir SitoB
->
->cd /var/www/SitoB
->
->sudo mkdir log
->
->sudo mkdir web
->
->cd /var/www/SitoB/web/
->
->sudo nano Index.html
->
 
-6. SITO C
+7. SITO C
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 003-default.conf
@@ -122,31 +118,17 @@
 >
 >       CustomLog /var/www/SitoC/log/access.log combined
 >
+>sudo mkdir /var/www/ SitoC
+>
+>sudo mkdir /var/www/SitoC log
+>
+>sudo mkdir /var/www/SitoC web
+>
+>sudo nano /var/www/SitoC/index.html
+>
 >sudo systemctl reload apache2
 >
 >sudo a2ensite 003-default.conf
->
->cd /var/www/
->
->sudo mkdir SitoC
->
->cd /var/www/SitoC
->
->sudo mkdir log
->
->sudo mkdir web
->
->cd /var/www/SitoB/web/
->
->sudo nano Index.html
->
-
---------------------------------------------------------------------
-
-7. CREARE UN UTENTE PER ACCESSO UNICO ALLA CARTELLA SitoA o SitoB o SitoC
->sudo useradd -s /bin/bash -d /var/www/SitoA -m usersitoX
->
->sudo passwd usersitoX
 >
 
 --------------------------------------------------------------------
