@@ -7,7 +7,7 @@
 [CREAZIONE UTENTI](#CREAZIONE-UTENTI)<br>
 [CREAZIONE SPAZIO SITI](#CREAZIONE-SPAZIO-SITI)<br>
 [CONTROLLO FILE APACHE2](#CONTROLLO-FILE-APACHE2)<br>
-[CREAZIONE SITO A](#CREAZIONE-SITO-A)<br>
+[CREAZIONE SITO](#CREAZIONE-SITO)<br>
 [CONFIGURAZIONE FTP](#CONFIGURAZIONE-FTP)<br>
 [OPZIONALE: DHCP4 + WINDOWS](#OPZIONALE)<br>
 
@@ -97,7 +97,9 @@
 
 ---------------------------------------------------------------------
 
-## CREAZIONE SITO A
+## CREAZIONE SITO
+
+### SITO A
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 001-default.conf
