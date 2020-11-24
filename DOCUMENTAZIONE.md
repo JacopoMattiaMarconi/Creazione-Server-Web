@@ -4,8 +4,7 @@
 
 [INSTALLAZIONE PACCHETTI NECESSARI](#INSTALLARE-APACHE2,-OPENSSH-SERVER,-VSFTPD-(per-comandi-FTP-con-FileZilla))<br>
 [CONFIGURAZIONE DI RETE](#CONFIGURAZIONE-DI-RETE)<br>
-[CREAZIONE UTENTI](#3.-CREAZIONE-UTENTI)<br>
-[CIAO](#CONFIGU-di-rete)<br>
+[CREAZIONE UTENTI](#CREAZIONE-UTENTI)<br>
 [CREAZIONE SPAZIO SITI](4.-CREAZIONE-SPAZIO-SITI)<br>
 [CONTROLLO FILE APACHE2](#5.-CONTROLLO-FILE-APACHE2)<br>
 [CREAZIONE SITO A](#6.-CREAZIONE-SITO-A)<br>
@@ -59,9 +58,7 @@
 
 ---------------------------------------------------------------------
 
-## CONFIGU di rete
-
-## 3. CREAZIONE UTENTI
+## CREAZIONE UTENTI
 >sudo useradd -s /bin/bash -d /var/www/SitoX -m usersitoX
 >
 >sudo passwd usersitoX
@@ -69,7 +66,7 @@
 
 ---------------------------------------------------------------------
 
-## 4. CREAZIONE SPAZIO SITI<br>
+## CREAZIONE SPAZIO SITI<br>
 :exclamation: Lo spazio dei siti può essere creato dall'utente creato precedentemente da root
 >sudo mkdir /var/www/ SitoA
 >
@@ -80,7 +77,7 @@
 
 --------------------------------------------------------------------
 
-## 5. CONTROLLO FILE APACHE2<br>
+## CONTROLLO FILE APACHE2<br>
 :exclamation: controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
 
 >cd /etc/apache2/apache2.conf
@@ -96,7 +93,7 @@
 
 ---------------------------------------------------------------------
 
-## 6. CREAZIONE SITO A
+## CREAZIONE SITO A
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 001-default.conf
@@ -118,7 +115,7 @@
 >sudo a2ensite 001-default.conf
 >
 
-## 7. SITO B
+### SITO B
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 002-default.conf
@@ -140,7 +137,7 @@
 >sudo a2ensite 002-default.conf
 >
 
-## 8. SITO C
+### SITO C
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 003-default.conf
@@ -164,7 +161,7 @@
 
 --------------------------------------------------------------------
 
-## 9. FTP: CONFIGURARE FILE VSFTP
+## FTP: CONFIGURARE FILE VSFTP
 >sudo nano /etc/vsftpd.conf
 >
 
@@ -220,7 +217,7 @@
 
 -------------------------------------------------------------
 
-## 10. OPZ: WINDOWS (SE SI USA CONFIGURAZIONE DHCP4)
+## OPZ: WINDOWS (SE SI USA CONFIGURAZIONE DHCP4)
 >System32\drivers\etc\hosts
 >
 >#192.168.1.28  localhost
