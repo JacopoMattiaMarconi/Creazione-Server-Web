@@ -5,7 +5,7 @@
 [INSTALLAZIONE PACCHETTI NECESSARI](#1.-INSTALLARE-APACHE2,-OPENSSH-SERVER,-VSFTPD-(per-comandi-FTP-con-FileZilla))<br>
 [CONFIGURAZIONE DI RETE](#2.-CONFIGURAZIONE-DI-RETE)<br>
 [CREAZIONE UTENTI](#3.-CREAZIONE-UTENTI)<br>
-[CIAO](#configurazione-di-rete)<br>
+[CIAO](#1.-configurazione-di-rete)<br>
 [CREAZIONE SPAZIO SITI](4.-CREAZIONE-SPAZIO-SITI)<br>
 [CONTROLLO FILE APACHE2](#5.-CONTROLLO-FILE-APACHE2)<br>
 [CREAZIONE SITO A](#6.-CREAZIONE-SITO-A)<br>
@@ -59,7 +59,7 @@
 
 ---------------------------------------------------------------------
 
-## Configurazione di rete
+## 1. Configurazione di rete
 
 ## 3. CREAZIONE UTENTI
 >sudo useradd -s /bin/bash -d /var/www/SitoX -m usersitoX
