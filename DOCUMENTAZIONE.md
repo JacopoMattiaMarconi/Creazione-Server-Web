@@ -9,9 +9,9 @@
 [CONTROLLO FILE APACHE2](#CONTROLLO-FILE-APACHE2)
 [CREAZIONE SITO A](#6.-CREAZIONE-SITO-A)
 [FTP: CONFIGURARE FILE VSFTP](#FTP:-CONFIGURARE-FILE-VSFTP)
-[OPZ: WINDOWS (SE SI USA CONFIGURAZIONE DHCP4)](#OPZ:-WINDOWS-(SE-SI-USA-CONFIGURAZIONE-DHCP4))
+[OPZIONALE: DHCP4 + WINDOWS](#OPZ:-WINDOWS-(SE-SI-USA-CONFIGURAZIONE-DHCP4))
 
-##1. INSTALLARE APACHE2, OPENSSH-SERVER, VSFTPD (per comandi FTP con FileZilla)
+## 1. INSTALLARE APACHE2, OPENSSH-SERVER, VSFTPD (per comandi FTP con FileZilla)
 >sudo apt update
 >
 >sudo apt-get install apache2
@@ -21,8 +21,7 @@
 >sudo apt-get install vsftpd
 
 ---------------------------------------------------------------------
-
-2. CONFIGURAZIONE DI RETE<br>
+## 2. CONFIGURAZIONE DI RETE<br>
 :exclamation: In caso di virtualizzazione è necessario porre scheda in bridge
 
 >cd /etc/netplan/00-installer-config.yaml
@@ -59,7 +58,7 @@
 
 ---------------------------------------------------------------------
 
-3. CREAZIONE UTENTI
+## 3. CREAZIONE UTENTI
 >sudo useradd -s /bin/bash -d /var/www/SitoX -m usersitoX
 >
 >sudo passwd usersitoX
@@ -67,7 +66,7 @@
 
 ---------------------------------------------------------------------
 
-4. CREAZIONE SPAZIO SITI<br>
+## 4. CREAZIONE SPAZIO SITI<br>
 :exclamation: Lo spazio dei siti può essere creato dall'utente creato precedentemente da root
 >sudo mkdir /var/www/ SitoA
 >
@@ -78,7 +77,7 @@
 
 --------------------------------------------------------------------
 
-5. CONTROLLO FILE APACHE2<br>
+## 5. CONTROLLO FILE APACHE2<br>
 :exclamation: controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
 
 >cd /etc/apache2/apache2.conf
@@ -94,7 +93,7 @@
 
 ---------------------------------------------------------------------
 
-6. CREAZIONE SITO A
+## 6. CREAZIONE SITO A
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 001-default.conf
@@ -116,7 +115,7 @@
 >sudo a2ensite 001-default.conf
 >
 
-7. SITO B
+## 7. SITO B
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 002-default.conf
@@ -138,7 +137,7 @@
 >sudo a2ensite 002-default.conf
 >
 
-8. SITO C
+## 8. SITO C
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 003-default.conf
@@ -162,7 +161,7 @@
 
 --------------------------------------------------------------------
 
-9. FTP: CONFIGURARE FILE VSFTP
+## 9. FTP: CONFIGURARE FILE VSFTP
 >sudo nano /etc/vsftpd.conf
 >
 
@@ -218,7 +217,7 @@
 
 -------------------------------------------------------------
 
-10. OPZ: WINDOWS (SE SI USA CONFIGURAZIONE DHCP4)
+## 10. OPZ: WINDOWS (SE SI USA CONFIGURAZIONE DHCP4)
 >System32\drivers\etc\hosts
 >
 >#192.168.1.28  localhost
