@@ -71,7 +71,7 @@
 ---------------------------------------------------------------------
 
 ## CREAZIONE SPAZIO SITI<br>
-:exclamation: Lo spazio dei siti può essere creato dall'utente creato precedentemente da root
+:warning: Lo spazio dei siti può essere creato dall'utente creato precedentemente da root
 >sudo mkdir /var/www/ SitoA
 >
 >sudo mkdir /var/www/SitoA log
@@ -82,7 +82,7 @@
 --------------------------------------------------------------------
 
 ## CONTROLLO FILE APACHE2<br>
-:exclamation: controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
+:warning: controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
 
 >cd /etc/apache2/apache2.conf
 >
