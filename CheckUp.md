@@ -6,13 +6,13 @@
 >
 >ping su altra macchina per verificare connettività
 >
-
+:white_check_mark: <br>
 --------------------------------------------------------------
 
 2. controllare connettività dopo aver installato APACHE2
 >digitare ip su barra di ricerca nel browser
 >
-
+:white_check_mark: <br>
 --------------------------------------------------------------
 
 3. controllo finale su raggiungimento sitoX
@@ -28,11 +28,13 @@
 >
 >sudo systemctl reload apache2
 >
+:white_check_mark: <br>
 
 --------------------------------------------------------------
 
 4. controllare inserimento corretto per accesso unico alla cartella SitoA
 >exit
 >
->         accedere con user e passwd insirite
+>         accedere con user e passwd inserite
 >
+:white_check_mark: <br>
