@@ -26,7 +26,7 @@
 
 ---------------------------------------------------------------------
 ## CONFIGURAZIONE DI RETE<br>
-:exclamation: In caso di virtualizzazione è necessario porre scheda in bridge
+:warning: in caso di virtualizzazione è necessario porre scheda in bridge
 
 >cd /etc/netplan/00-installer-config.yaml
 
