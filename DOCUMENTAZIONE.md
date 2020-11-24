@@ -3,7 +3,7 @@
 ## apache2
 
 [INSTALLAZIONE PACCHETTI NECESSARI](#INSTALLARE-APACHE2,-OPENSSH-SERVER,-VSFTPD-(per-comandi-FTP-con-FileZilla))<br>
-[CONFIGURAZIONE DI RETE](#2.-CONFIGURAZIONE-DI-RETE)<br>
+[CONFIGURAZIONE DI RETE](#CONFIGURAZIONE-DI-RETE)<br>
 [CREAZIONE UTENTI](#3.-CREAZIONE-UTENTI)<br>
 [CIAO](#CONFIGU-di-rete)<br>
 [CREAZIONE SPAZIO SITI](4.-CREAZIONE-SPAZIO-SITI)<br>
@@ -22,7 +22,7 @@
 >sudo apt-get install vsftpd
 
 ---------------------------------------------------------------------
-## 2. CONFIGURAZIONE DI RETE<br>
+## CONFIGURAZIONE DI RETE<br>
 :exclamation: In caso di virtualizzazione è necessario porre scheda in bridge
 
 >cd /etc/netplan/00-installer-config.yaml
