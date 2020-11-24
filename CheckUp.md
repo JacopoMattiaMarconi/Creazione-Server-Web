@@ -29,7 +29,6 @@
 >sudo systemctl reload apache2
 >
 :white_check_mark: <br>
-
 --------------------------------------------------------------
 
 4. controllare inserimento corretto per accesso unico alla cartella SitoA
