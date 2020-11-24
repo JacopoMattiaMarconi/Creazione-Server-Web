@@ -8,8 +8,8 @@
 [CREAZIONE SPAZIO SITI](#CREAZIONE-SPAZIO-SITI)<br>
 [CONTROLLO FILE APACHE2](#CONTROLLO-FILE-APACHE2)<br>
 [CREAZIONE SITO A](#CREAZIONE-SITO-A)<br>
-[FTP: CONFIGURARE FILE VSFTP](#FTP:-CONFIGURARE-FILE-VSFTP)<br>
-[OPZIONALE: DHCP4 + WINDOWS](#OPZ:-WINDOWS-(SE-SI-USA-CONFIGURAZIONE-DHCP4))<br>
+[CONFIGURAZIONE FTP](#CONFIGURAZIONE-FTP)<br>
+[OPZIONALE: DHCP4 + WINDOWS](#OPZIONALE)<br>
 
 ## INSTALLAZIONE PACCHETTI
 :warning: pacchetto APACHE2 per scaricare server APACHE2 con FileZilla<br>
@@ -165,7 +165,8 @@
 
 --------------------------------------------------------------------
 
-## FTP: CONFIGURARE FILE VSFTP
+## CONFIGURAZIONE FTP
+:warning: configurare file vsftpd per usufruire dei comandi FTP da remoto<br>
 >sudo nano /etc/vsftpd.conf
 >
 
@@ -221,7 +222,8 @@
 
 -------------------------------------------------------------
 
-## OPZ: WINDOWS (SE SI USA CONFIGURAZIONE DHCP4)
+## OPZIONALE
+:warning: se si usa configurazione DHCP4 e si dispone di Windows su macchina fisica
 >System32\drivers\etc\hosts
 >
 >#192.168.1.28  localhost
