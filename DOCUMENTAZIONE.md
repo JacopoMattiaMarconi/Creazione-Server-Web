@@ -3,10 +3,13 @@
 ## apache2
 
 [INSTALLARE APACHE2, OPENSSH-SERVER, VSFTPD (per comandi FTP con FileZilla)](#INSTALLARE-APACHE2,-OPENSSH-SERVER,-VSFTPD-(per-comandi-FTP-con-FileZilla))<br>
-[Configurazione rete](#configurazione-di-rete)<br>
-[Aggiunta utenti](#aggiungere-un-utente-specifico-per-ogni-sito)<br>
-[Configurazione host virtuali](#impostare-gli-host-virtuali)<br>
-[FTP: trasferimento file](#ftp---trasferimento-file-da-e-verso-server)
+[CONFIGURAZIONE DI RETE](#CONFIGURAZIONE-DI-RETE)<br>
+[CREAZIONE UTENTI](#CREAZIONE-UTENTI)<br>
+[CREAZIONE SPAZIO SITI](#CREAZIONE-SPAZIO-SITI)<br>
+[CONTROLLO FILE APACHE2](#CONTROLLO-FILE-APACHE2)
+[CREAZIONE SITO A](#CREAZIONE-SITO-A)
+[FTP: CONFIGURARE FILE VSFTP](#FTP:-CONFIGURARE-FILE-VSFTP)
+[OPZ: WINDOWS (SE SI USA CONFIGURAZIONE DHCP4)](#OPZ:-WINDOWS-(SE-SI-USA-CONFIGURAZIONE-DHCP4))
 
 1. INSTALLARE APACHE2, OPENSSH-SERVER, VSFTPD (per comandi FTP con FileZilla)
 >sudo apt update
@@ -19,7 +22,9 @@
 
 ---------------------------------------------------------------------
 
-2. modificare impostazioni di rete, scheda di rete in bridge
+2. CONFIGURAZIONE DI RETE<br>
+:exclamation: In caso di virtualizzazione è necessario porre scheda in bridge
+
 >cd /etc/netplan/00-installer-config.yaml
 
 >
@@ -54,7 +59,7 @@
 
 ---------------------------------------------------------------------
 
-3. CREARE UN UTENTE PER ACCESSO UNICO ALLA CARTELLA SitoA o SitoB o SitoC
+3. CREAZIONE UTENTI
 >sudo useradd -s /bin/bash -d /var/www/SitoX -m usersitoX
 >
 >sudo passwd usersitoX
@@ -62,17 +67,20 @@
 
 ---------------------------------------------------------------------
 
-4. CREARE SPAZIO SITI
+4. CREAZIONE SPAZIO SITI<br>
+:exclamation: Lo spazio dei siti può essere creato dall'utente creato precedentemente da root
 >sudo mkdir /var/www/ SitoA
 >
->sudo mkdir /var/www/ SitoB
+>sudo mkdir /var/www/SitoA log
 >
->sudo mkdir /var/www/ SitoC
+>sudo mkdir /var/www/SitoA web
 >
 
 --------------------------------------------------------------------
 
-5. controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
+5. CONTROLLO FILE APACHE2<br>
+:exclamation: controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
+
 >cd /etc/apache2/apache2.conf
 >
 
@@ -86,7 +94,7 @@
 
 ---------------------------------------------------------------------
 
-6. SITO A
+6. CREAZIONE SITO A
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 001-default.conf
@@ -100,10 +108,6 @@
 >       ErrorLog /var/www/SitoA/log/error.log
 >
 >       CustomLog /var/www/SitoA/log/access.log combined
->
->sudo mkdir /var/www/SitoA log
->
->sudo mkdir /var/www/SitoA web
 >
 >sudo nano /var/www/SitoA/index.html
 >
@@ -127,10 +131,6 @@
 >
 >       CustomLog /var/www/SitoB/log/access.log combined 
 >
->sudo mkdir /var/www/SitoB log
->
->sudo mkdir /var/www/SitoB web
->
 >sudo nano /var/www/SitoB/index.html
 >
 >sudo systemctl reload apache2
@@ -153,10 +153,6 @@
 >
 >       CustomLog /var/www/SitoC/log/access.log combined
 >
->sudo mkdir /var/www/SitoC log
->
->sudo mkdir /var/www/SitoC web
->
 >sudo nano /var/www/SitoC/index.html
 >
 >sudo systemctl reload apache2
@@ -166,7 +162,7 @@
 
 --------------------------------------------------------------------
 
-9. CONFIGURARE FILE VSFTP
+9. FTP: CONFIGURARE FILE VSFTP
 >sudo nano /etc/vsftpd.conf
 >
 
@@ -222,7 +218,7 @@
 
 -------------------------------------------------------------
 
-10. Windows (SE SI USA CONFIGURAZIONE DHCP4)
+10. OPZ: WINDOWS (SE SI USA CONFIGURAZIONE DHCP4)
 >System32\drivers\etc\hosts
 >
 >#192.168.1.28  localhost
