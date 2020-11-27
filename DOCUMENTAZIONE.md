@@ -175,7 +175,7 @@ disattivare file dell'utente incriminato:
 
 ### controllo finale sul raggiungimento del sito <br>
 comandi utili:
->digitare sul browser <servername>
+>digitare sul browser servername
 >
 >apache2 is not active -> sudo systemctl enable apache2
 >
