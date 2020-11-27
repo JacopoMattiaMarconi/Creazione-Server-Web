@@ -137,7 +137,7 @@ controllare inserimento corretto per accesso unico alla cartella
 
 >sudo nano /var/www/SitoA/index.html
 >
->sudo systemctl reload apache2
+>systemctl reload apache2
 >
 
 >         [sudo] password for adminuser:
@@ -145,8 +145,18 @@ controllare inserimento corretto per accesso unico alla cartella
 >         See "systemctl status apache2.service" and "journalctl -xe" for details.
 >
 
+>         Authentication is required to reload 'apache2.service'.
+>         Authenticating as: adminuser
+>         Password:
+>         ==== AUTHENTICATION COMPLETE ===
+>
+
 >sudo a2ensite 001-default.conf
 >
+
+>         Enabling site hm18858-default.
+>         To activate the new configuration, you need to run:
+>           systemctl reload apache2
 
 ## :warning: 
 visonare utente che ha generato errore: <br>
@@ -156,6 +166,10 @@ visonare utente che ha generato errore: <br>
 disattivare file dell'utente incriminato:
 >sudo a2dissite <fileconf.conf>
 >
+
+>         Site hm18858-default disabled.
+>         To activate the new configuration, you need to run:
+>           systemctl reload apache2
 
 --------------------------------------------------------------------
 
