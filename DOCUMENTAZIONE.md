@@ -79,7 +79,8 @@ controllare corretta configurazione di rete: <br>
 >sudo passwd usersitoX
 >
 
-### CHECKPOINT :white_check_mark: controllare inserimento corretto per accesso unico alla cartella
+### CHECKPOINT :white_check_mark: <br>
+controllare inserimento corretto per accesso unico alla cartella
 >exit
 >
 >         accedere con user e passwd inserite
