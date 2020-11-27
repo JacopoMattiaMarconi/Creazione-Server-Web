@@ -25,7 +25,13 @@
 >
 >sudo apt-get install vsftpd
 
+:white_check_mark: <br>
+controllare connettività dopo aver installato APACHE2
+>digitare ip su barra di ricerca nel browser
+>
+
 ---------------------------------------------------------------------
+
 ## CONFIGURAZIONE DI RETE<br>
 :warning: in caso di virtualizzazione è necessario porre scheda in bridge
 
@@ -43,7 +49,8 @@
 >       version: 2
 >
 
->sudo netpaln try
+Per accettare configurazione appena impostata: <br>
+>sudo netplan try
 
 >
 >     [sudo] password for adminuser:
@@ -59,8 +66,10 @@
 >     Configuration accepted.
 >
 
+Per controllare corretta configurazione di rete: <br>
 >ip address
 
+:check:
 ---------------------------------------------------------------------
 
 ## CREAZIONE UTENTI
