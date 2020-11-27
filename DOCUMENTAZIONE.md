@@ -7,6 +7,7 @@
 [CREAZIONE UTENTI](#CREAZIONE-UTENTI)<br>
 [CREAZIONE SPAZIO SITI](#CREAZIONE-SPAZIO-SITI)<br>
 [CONTROLLO FILE APACHE2](#CONTROLLO-FILE-APACHE2)<br>
+[CREAZIONE FILE DI CONFIGURAZIONE DEL SITO](#CREAZIONE-FILE-DI-CONFIGURAZIONE-DEL-SITO)<br>
 [CREAZIONE SITO](#CREAZIONE-SITO)<br>
 [CONFIGURAZIONE FTP](#CONFIGURAZIONE-FTP)<br>
 [OPZIONALE: DHCP4 + WINDOWS](#OPZIONALE)<br>
@@ -97,9 +98,7 @@
 
 ---------------------------------------------------------------------
 
-## CREAZIONE SITO
-
-### SITO A
+## CREAZIONE FILE DI CONFIGURAZIONE DEL SITO
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 001-default.conf
@@ -114,6 +113,12 @@
 >
 >       CustomLog /var/www/SitoA/log/access.log combined
 >
+
+---------------------------------------------------------------------
+
+## CREAZIONE SITO
+
+### SITO A
 >sudo nano /var/www/SitoA/index.html
 >
 >sudo systemctl reload apache2
@@ -123,58 +128,6 @@
 
 se comando a2ensite da errore di compilazione:<br>
 >sudo a2dissite 001-default.conf
->
-
-### SITO B
->cd /etc/apache2/sites-available
->
->sudo cp 000-deafult.conf 002-default.conf
->
->sudo nano 002-deafult.conf
->
->       DocumentRoot /var/www/SitoB
->
->       ServerName sitob-113.virtual.marconi
->
->       ErrorLog /var/www/SitoB/log/error.log
->
->       CustomLog /var/www/SitoB/log/access.log combined 
->
->sudo nano /var/www/SitoB/index.html
->
->sudo systemctl reload apache2
->
->sudo a2ensite 002-default.conf
->
-
-se comando a2ensite da errore di compilazione:<br>
->sudo a2dissite 002-default.conf
->
-
-### SITO C
->cd /etc/apache2/sites-available
->
->sudo cp 000-deafult.conf 003-default.conf
->
->sudo nano 003-deafult.conf
->
->       DocumentRoot /var/www/SitoC
->
->       ServerName ubuntu-srv113.virtual.marconi
->
->       ErrorLog /var/www/SitoC/log/error.log
->
->       CustomLog /var/www/SitoC/log/access.log combined
->
->sudo nano /var/www/SitoC/index.html
->
->sudo systemctl reload apache2
->
->sudo a2ensite 003-default.conf
->
-
-se comando a2ensite da errore di compilazione:<br>
->sudo a2dissite 003-default.conf
 >
 
 --------------------------------------------------------------------
