@@ -247,7 +247,7 @@ comandi utili:
 
 -------------------------------------------------------------
 
-## OPZIONALE :busts_in_silhouette: Admin windows
+## OPZIONALE :bust_in_silhouette: Admin windows
 :warning: se si usa configurazione DHCP4 e si dispone di Windows su macchina fisica
 >System32\drivers\etc\hosts
 >
