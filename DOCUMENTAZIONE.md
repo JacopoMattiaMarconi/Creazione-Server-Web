@@ -66,16 +66,23 @@ Per accettare configurazione appena impostata: <br>
 >     Configuration accepted.
 >
 
-Per controllare corretta configurazione di rete: <br>
+### CHECKPOINT :white_check_mark: <br>
+controllare corretta configurazione di rete: <br>
 >ip address
+>
 
-:check:
 ---------------------------------------------------------------------
 
 ## CREAZIONE UTENTI
 >sudo useradd -s /bin/bash -d /var/www/SitoX -m usersitoX
 >
 >sudo passwd usersitoX
+>
+
+:white_check_mark: controllare inserimento corretto per accesso unico alla cartella
+>exit
+>
+>         accedere con user e passwd inserite
 >
 
 ---------------------------------------------------------------------
