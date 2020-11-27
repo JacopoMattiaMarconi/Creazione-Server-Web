@@ -12,7 +12,7 @@
 [CONFIGURAZIONE FTP](#CONFIGURAZIONE-FTP)<br>
 [OPZIONALE: DHCP4 + WINDOWS](#OPZIONALE)<br>
 
-## INSTALLAZIONE PACCHETTI
+## INSTALLAZIONE PACCHETTI :bust_in_silhouette: Admin
 :warning: pacchetto APACHE2 per scaricare server APACHE2 con FileZilla<br>
 :warning: pacchetto OPENSSH-SERVER per comandi FTP con FileZilla<br>
 :warning: pacchetto VSFTPD per comandi FTP con FileZilla
@@ -32,7 +32,7 @@ controllare connettività dopo aver installato APACHE2
 
 ---------------------------------------------------------------------
 
-## CONFIGURAZIONE DI RETE<br>
+## CONFIGURAZIONE DI RETE<br> :bust_in_silhouette: Admin
 :warning: in caso di virtualizzazione è necessario porre scheda in bridge
 
 >cd /etc/netplan/00-installer-config.yaml
@@ -73,7 +73,7 @@ controllare corretta configurazione di rete: <br>
 
 ---------------------------------------------------------------------
 
-## CREAZIONE UTENTI
+## CREAZIONE UTENTI :bust_in_silhouette: Admin
 >sudo useradd -s /bin/bash -d /var/www/SitoX -m usersitoX
 >
 >sudo passwd usersitoX
@@ -88,7 +88,7 @@ controllare inserimento corretto per accesso unico alla cartella
 
 ---------------------------------------------------------------------
 
-## CREAZIONE SPAZIO SITI<br>
+## CREAZIONE SPAZIO SITI<br> :busts_in_silhouette: Admin, users
 :warning: Lo spazio dei siti può essere creato dall'utente creato precedentemente da root
 >sudo mkdir /var/www/ SitoA
 >
@@ -99,7 +99,7 @@ controllare inserimento corretto per accesso unico alla cartella
 
 --------------------------------------------------------------------
 
-## CONTROLLO FILE APACHE2<br>
+## CONTROLLO FILE APACHE2<br> :bust_in_silhouette: Admin
 :warning: controllare che vengano gestiti i file dentro apache2
 
 >cat cd /etc/apache2/apache2.conf
@@ -115,7 +115,7 @@ controllare inserimento corretto per accesso unico alla cartella
 
 ---------------------------------------------------------------------
 
-## CREAZIONE FILE DI CONFIGURAZIONE DEL SITO
+## CREAZIONE FILE DI CONFIGURAZIONE DEL SITO :bust_in_silhouette: Admin
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 001-default.conf
@@ -133,10 +133,10 @@ controllare inserimento corretto per accesso unico alla cartella
 
 ---------------------------------------------------------------------
 
-## CREAZIONE SITO
+## CREAZIONE SITO :busts_in_silhouette: Users -> Admin
 
-dopo aver creato un file index.html nella cartella web del sito personale
-e dopo aver creato la cartella log:
+dopo aver creato un file index.html nella cartella web dello spazio personale
+e dopo aver creato la cartella log (var/www/Sito/web e var/www/Sito/log):
 >systemctl reload apache2
 >
 
@@ -190,7 +190,7 @@ comandi utili:
   
 --------------------------------------------------------------------
 
-## CONFIGURAZIONE FTP
+## CONFIGURAZIONE FTP :bust_in_silhouette: Admin
 :warning: configurare file vsftpd per usufruire dei comandi FTP da remoto<br>
 >sudo nano /etc/vsftpd.conf
 >
@@ -247,7 +247,7 @@ comandi utili:
 
 -------------------------------------------------------------
 
-## OPZIONALE
+## OPZIONALE :busts_in_silhouette: Admin windows
 :warning: se si usa configurazione DHCP4 e si dispone di Windows su macchina fisica
 >System32\drivers\etc\hosts
 >
