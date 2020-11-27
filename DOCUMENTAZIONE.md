@@ -173,6 +173,21 @@ disattivare file dell'utente incriminato:
 >         To activate the new configuration, you need to run:
 >           systemctl reload apache2
 
+### controllo finale sul raggiungimento del sito <br>
+comandi utili:
+>digitare sul browser <servername>
+>
+>apache2 is not active -> sudo systemctl enable apache2
+>
+>cat /var/log/syslog
+>
+>history | grep enable
+>
+>sudo systemctl restart apache2.service
+>
+>sudo systemctl reload apache2
+>
+  
 --------------------------------------------------------------------
 
 ## CONFIGURAZIONE FTP
