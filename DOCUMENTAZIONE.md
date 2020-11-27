@@ -127,7 +127,6 @@ Per controllare corretta configurazione di rete: <br>
 
 ## CREAZIONE SITO
 
-### SITO A
 >sudo nano /var/www/SitoA/index.html
 >
 >sudo systemctl reload apache2
@@ -137,6 +136,14 @@ Per controllare corretta configurazione di rete: <br>
 
 se comando a2ensite da errore di compilazione:<br>
 >sudo a2dissite 001-default.conf
+>
+
+:warning: per visonare utente che ha generato errore: <br>
+>apache2ctl configtest
+>
+
+Disattivare file dell'utente incriminato:
+>sudo a2dissite <fileconf.conf>
 >
 
 --------------------------------------------------------------------
