@@ -135,16 +135,12 @@ controllare inserimento corretto per accesso unico alla cartella
 
 ## CREAZIONE SITO
 
->sudo nano /var/www/SitoA/index.html
->
+dopo aver creato un file index.html nella cartella web del sito personale
+e dopo aver creato la cartella log:
 >systemctl reload apache2
 >
 
->         [sudo] password for adminuser:
->         Job for apache2.service failed.
->         See "systemctl status apache2.service" and "journalctl -xe" for details.
->
-
+### :white_check_mark: passaggi avvenuti con successo:
 >         Authentication is required to reload 'apache2.service'.
 >         Authenticating as: adminuser
 >         Password:
@@ -158,7 +154,13 @@ controllare inserimento corretto per accesso unico alla cartella
 >         To activate the new configuration, you need to run:
 >           systemctl reload apache2
 
-## :warning: 
+### :warning: passaggi non avvenuti con successo
+
+>         [sudo] password for adminuser:
+>         Job for apache2.service failed.
+>         See "systemctl status apache2.service" and "journalctl -xe" for details.
+>
+
 visonare utente che ha generato errore: <br>
 >apache2ctl configtest
 >
