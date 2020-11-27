@@ -1,4 +1,4 @@
-# Creazione-Server-Web su macchina virtuale con Linux Ubuntu Server :moon:
+# Creazione-Web-Server su macchina virtuale con Linux Ubuntu Server :computer:
 
 ## apache2
 
@@ -32,7 +32,7 @@ controllare connettività dopo aver installato APACHE2
 
 ---------------------------------------------------------------------
 
-## CONFIGURAZIONE DI RETE<br> :bust_in_silhouette: Admin
+## CONFIGURAZIONE DI RETE :bust_in_silhouette: Admin
 :warning: in caso di virtualizzazione è necessario porre scheda in bridge
 
 >cd /etc/netplan/00-installer-config.yaml
@@ -88,7 +88,7 @@ controllare inserimento corretto per accesso unico alla cartella
 
 ---------------------------------------------------------------------
 
-## CREAZIONE SPAZIO SITI<br> :busts_in_silhouette: Admin, users
+## CREAZIONE SPAZIO SITI :busts_in_silhouette: Admin, Users
 :warning: Lo spazio dei siti può essere creato dall'utente creato precedentemente da root
 >sudo mkdir /var/www/ SitoA
 >
@@ -99,7 +99,7 @@ controllare inserimento corretto per accesso unico alla cartella
 
 --------------------------------------------------------------------
 
-## CONTROLLO FILE APACHE2<br> :bust_in_silhouette: Admin
+## CONTROLLO FILE APACHE2 :bust_in_silhouette: Admin
 :warning: controllare che vengano gestiti i file dentro apache2
 
 >cat cd /etc/apache2/apache2.conf
