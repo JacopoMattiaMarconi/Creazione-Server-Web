@@ -1,8 +1,6 @@
-# Creazione Web Server su macchina <br>
-# virtuale con Linux Ubuntu Server <br>
-           :computer:
+# Creazione Web Server Linux Ubuntu Server :computer:
 
-## apache2
+## macchina virtualizzata, apache2
 
 [INSTALLAZIONE PACCHETTI NECESSARI](#INSTALLAZIONE-PACCHETTI)<br>
 [CONFIGURAZIONE DI RETE](#CONFIGURAZIONE-DI-RETE)<br>
