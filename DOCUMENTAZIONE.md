@@ -121,6 +121,10 @@
 >sudo a2ensite 001-default.conf
 >
 
+se comando a2ensite da errore di compilazione:<br>
+>sudo a2dissite 001-default.conf
+>
+
 ### SITO B
 >cd /etc/apache2/sites-available
 >
@@ -143,6 +147,10 @@
 >sudo a2ensite 002-default.conf
 >
 
+se comando a2ensite da errore di compilazione:<br>
+>sudo a2dissite 001-default.conf
+>
+
 ### SITO C
 >cd /etc/apache2/sites-available
 >
@@ -163,6 +171,10 @@
 >sudo systemctl reload apache2
 >
 >sudo a2ensite 003-default.conf
+>
+
+se comando a2ensite da errore di compilazione:<br>
+>sudo a2dissite 001-default.conf
 >
 
 --------------------------------------------------------------------
