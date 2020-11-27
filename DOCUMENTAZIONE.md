@@ -148,7 +148,7 @@ se comando a2ensite da errore di compilazione:<br>
 >
 
 se comando a2ensite da errore di compilazione:<br>
->sudo a2dissite 001-default.conf
+>sudo a2dissite 002-default.conf
 >
 
 ### SITO C
@@ -174,7 +174,7 @@ se comando a2ensite da errore di compilazione:<br>
 >
 
 se comando a2ensite da errore di compilazione:<br>
->sudo a2dissite 001-default.conf
+>sudo a2dissite 003-default.conf
 >
 
 --------------------------------------------------------------------
