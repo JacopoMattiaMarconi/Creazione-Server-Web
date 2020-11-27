@@ -100,9 +100,9 @@ controllare inserimento corretto per accesso unico alla cartella
 --------------------------------------------------------------------
 
 ## CONTROLLO FILE APACHE2<br>
-:warning: controllare che vengano gestiti i file dentro determinate cartelle <Directory /var/www/>
+:warning: controllare che vengano gestiti i file dentro apache2
 
->cd /etc/apache2/apache2.conf
+>cat cd /etc/apache2/apache2.conf
 >
 
 >
@@ -139,18 +139,21 @@ controllare inserimento corretto per accesso unico alla cartella
 >
 >sudo systemctl reload apache2
 >
+
+>         [sudo] password for adminuser:
+>         Job for apache2.service failed.
+>         See "systemctl status apache2.service" and "journalctl -xe" for details.
+>
+
 >sudo a2ensite 001-default.conf
 >
 
-se comando a2ensite da errore di compilazione:<br>
->sudo a2dissite 001-default.conf
->
-
-:warning: per visonare utente che ha generato errore: <br>
+## :warning: 
+visonare utente che ha generato errore: <br>
 >apache2ctl configtest
 >
 
-Disattivare file dell'utente incriminato:
+disattivare file dell'utente incriminato:
 >sudo a2dissite <fileconf.conf>
 >
 
