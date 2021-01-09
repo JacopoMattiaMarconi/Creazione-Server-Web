@@ -32,7 +32,7 @@ controllare connettività dopo aver installato APACHE2
 
 ---------------------------------------------------------------------
 
-## CONFIGURAZIONE DI RETE <br>:bust_in_silhouette: Admin
+## CONFIGURAZIONE DI RETE :bust_in_silhouette: Admin
 :warning: in caso di virtualizzazione è necessario porre scheda in bridge
 
 >cd /etc/netplan/00-installer-config.yaml
