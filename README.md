@@ -25,14 +25,14 @@
 >
 >sudo apt-get install vsftpd
 
-### CHECKPOINT <br>:white_check_mark: <br>
+### CHECKPOINT :white_check_mark: <br>
 controllare connettività dopo aver installato APACHE2
 >digitare ip su barra di ricerca nel browser
 >
 
 ---------------------------------------------------------------------
 
-## CONFIGURAZIONE DI RETE :bust_in_silhouette: Admin
+## CONFIGURAZIONE DI RETE <br>:bust_in_silhouette: Admin
 :warning: in caso di virtualizzazione è necessario porre scheda in bridge
 
 >cd /etc/netplan/00-installer-config.yaml
