@@ -25,7 +25,7 @@
 >
 >sudo apt-get install vsftpd
 
-### CHECKPOINT :white_check_mark: <br>
+### CHECKPOINT <br>:white_check_mark: <br>
 controllare connettività dopo aver installato APACHE2
 >digitare ip su barra di ricerca nel browser
 >
