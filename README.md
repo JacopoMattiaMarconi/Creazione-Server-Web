@@ -2,6 +2,7 @@
 
 ## macchina virtualizzata, apache2
 
+[INSTALLAZIONE SAMBA](#INSTALLAZIONE-SAMBA)<BR>
 [INSTALLAZIONE PACCHETTI NECESSARI](#INSTALLAZIONE-PACCHETTI)<br>
 [CONFIGURAZIONE DI RETE](#CONFIGURAZIONE-DI-RETE)<br>
 [CREAZIONE UTENTI](#CREAZIONE-UTENTI)<br>
@@ -27,7 +28,7 @@ Di cosa avremo bisogno:
 >whereis samba
 >
 
-L'output dovrebbe essere il seguente:
+L'output dovrebbe essere il seguente: :white_check_mark:
 >     samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
 >
 
@@ -35,7 +36,7 @@ L'output dovrebbe essere il seguente:
 >
 >sudo nano /etc/samba/smb.conf
 
-File di configurazione:
+File di configurazione: 
 >     [sambashare]
 >
 >         comment = Samba on Ubuntu
