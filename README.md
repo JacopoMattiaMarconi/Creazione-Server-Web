@@ -15,6 +15,7 @@
 ## INSTALLAZIONE SAMBA
 Un file server Samba consente la condivisione di file tra diversi sistemi operativi su una rete.<br>
 Ti consente di accedere ai file del desktop da un laptop e di condividere file con utenti Windows e macOS.<br>
+<bR>
 Di cosa avremo bisogno:
 - Ubuntu 16.04 LTS
 - Una rete locale (LAN) su cui condividere file
@@ -27,7 +28,7 @@ Di cosa avremo bisogno:
 >
 
 L'output dovrebbe essere il seguente:
->samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
+>     samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
 >
 
 >mkdir /home/<username>/sambashare/
@@ -35,15 +36,15 @@ L'output dovrebbe essere il seguente:
 >sudo nano /etc/samba/smb.conf
 
 File di configurazione:
->              [sambashare]
+>     [sambashare]
 >
->                 comment = Samba on Ubuntu
+>         comment = Samba on Ubuntu
 >
->                  path = /home/username/sambashare
+>         path = /home/username/sambashare
 >
->                  read only = no
+>         read only = no
 >
->                  browsable = yes
+>         browsable = yes
 >
 
 >sudo service smbd restart
