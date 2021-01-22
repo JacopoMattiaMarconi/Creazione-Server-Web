@@ -12,6 +12,59 @@
 [CONFIGURAZIONE FTP](#CONFIGURAZIONE-FTP)<br>
 [OPZIONALE: DHCP4 + WINDOWS](#OPZIONALE)<br>
 
+## INSTALLAZIONE SAMBA
+Un file server Samba consente la condivisione di file tra diversi sistemi operativi su una rete.<br>
+Ti consente di accedere ai file del desktop da un laptop e di condividere file con utenti Windows e macOS.<br>
+Di cosa avremo bisogno:
+- Ubuntu 16.04 LTS
+- Una rete locale (LAN) su cui condividere file
+
+>sudo apt update
+>
+>sudo apt install samba
+>
+>whereis samba
+>
+
+L'output dovrebbe essere il seguente:
+>samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
+>
+
+>mkdir /home/<username>/sambashare/
+>
+>sudo nano /etc/samba/smb.conf
+
+File di configurazione:
+>              [sambashare]
+>
+>                 comment = Samba on Ubuntu
+>
+>                  path = /home/username/sambashare
+>
+>                  read only = no
+>
+>                  browsable = yes
+>
+
+>sudo service smbd restart
+>
+>sudo ufw allow samba
+>
+>sudo smbpasswd -a username
+>
+
+Su Ubuntu: apri il file manager predefinito e fai clic su Connetti al server, quindi inserisci:<br>
+>smb://ip-address/sambshare
+>
+
+Su macOS: nel menu Finder, fai clic su Vai> Connetti al server, quindi inserisci:<br>
+>smb://ip-address/sambshare
+>
+
+Su Windows, apri File Manager e modifica il percorso del file in:<br>
+>\\ip-address\sambashare
+>
+
 ## INSTALLAZIONE PACCHETTI :bust_in_silhouette: Admin
 :warning: pacchetto APACHE2 per scaricare server APACHE2 con FileZilla<br>
 :warning: pacchetto OPENSSH-SERVER per comandi FTP con FileZilla<br>
