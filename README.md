@@ -2,7 +2,6 @@
 
 ## macchina virtualizzata, apache2
 
-[INSTALLAZIONE SAMBA](#INSTALLAZIONE-SAMBA)<BR>
 [INSTALLAZIONE PACCHETTI NECESSARI](#INSTALLAZIONE-PACCHETTI)<br>
 [CONFIGURAZIONE DI RETE](#CONFIGURAZIONE-DI-RETE)<br>
 [CREAZIONE UTENTI](#CREAZIONE-UTENTI)<br>
@@ -10,64 +9,34 @@
 [CONTROLLO FILE APACHE2](#CONTROLLO-FILE-APACHE2)<br>
 [CREAZIONE FILE DI CONFIGURAZIONE DEL SITO](#CREAZIONE-FILE-DI-CONFIGURAZIONE-DEL-SITO)<br>
 [CREAZIONE SITO](#CREAZIONE-SITO)<br>
+[INSTALLAZIONE SAMBA](#INSTALLAZIONE-SAMBA)<br>
 [CONFIGURAZIONE FTP](#CONFIGURAZIONE-FTP)<br>
 [OPZIONALE: DHCP4 + WINDOWS](#OPZIONALE)<br>
 
-## INSTALLAZIONE SAMBA
-Un file server Samba consente la condivisione di file tra diversi sistemi operativi su una rete.<br>
-Ti consente di accedere ai file del desktop da un laptop e di condividere file con utenti Windows e macOS.<br>
-<bR>
-Di cosa avremo bisogno:
-- Ubuntu 16.04 LTS
-- Una rete locale (LAN) su cui condividere file
+## PERSONALIZZAZIONE HOSTNAME
+### tempo d'esecuzione: 5 min
 
->sudo apt update
+>sudo hostnamectl set-hostname nuovohostname
 >
->sudo apt install samba
->
->whereis samba
+>sudo reboot
 >
 
-L'output dovrebbe essere il seguente: :white_check_mark:
->     samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
+oppure 
+
+>sudo nano /etc/hostname
+>
+>sudo nano /etc/hosts
+>
+>sudo reboot
 >
 
->mkdir /home/<username>/sambashare/
->
->sudo nano /etc/samba/smb.conf
+### checkpoint :white_check_mark: <br>
+All'avvio l'hostname sarà cambiato
 
-File di configurazione: 
->     [sambashare]
->
->         comment = Samba on Ubuntu
->
->         path = /home/username/sambashare
->
->         read only = no
->
->         browsable = yes
->
+---------------------------------------------------------------------
 
->sudo service smbd restart
->
->sudo ufw allow samba
->
->sudo smbpasswd -a username
->
-
-Su Ubuntu: apri il file manager predefinito e fai clic su Connetti al server, quindi inserisci:<br>
->smb://ip-address/sambshare
->
-
-Su macOS: nel menu Finder, fai clic su Vai> Connetti al server, quindi inserisci:<br>
->smb://ip-address/sambshare
->
-
-Su Windows, apri File Manager e modifica il percorso del file in:<br>
->\\ip-address\sambashare
->
-
-## INSTALLAZIONE PACCHETTI :bust_in_silhouette: Admin
+## INSTALLAZIONE PACCHETTI
+### tempo d'esecuzione: 5 min
 :warning: pacchetto APACHE2 per scaricare server APACHE2 con FileZilla<br>
 :warning: pacchetto OPENSSH-SERVER per comandi FTP con FileZilla<br>
 :warning: pacchetto VSFTPD per comandi FTP con FileZilla
@@ -87,7 +56,8 @@ controllare connettività dopo aver installato APACHE2
 
 ---------------------------------------------------------------------
 
-## CONFIGURAZIONE DI RETE :bust_in_silhouette: Admin
+## CONFIGURAZIONE DI RETE
+### tempo d'esecuzione: 10 min
 :warning: in caso di virtualizzazione è necessario porre scheda in bridge
 
 >cd /etc/netplan/00-installer-config.yaml
@@ -128,7 +98,8 @@ controllare corretta configurazione di rete: <br>
 
 ---------------------------------------------------------------------
 
-## CREAZIONE UTENTI :bust_in_silhouette: Admin
+## CREAZIONE UTENTI 
+### tempo d'esecuzione: 5 min
 >sudo useradd -s /bin/bash -d /var/www/SitoX -m usersitoX
 >
 >sudo passwd usersitoX
@@ -143,7 +114,8 @@ controllare inserimento corretto per accesso unico alla cartella
 
 ---------------------------------------------------------------------
 
-## CREAZIONE SPAZIO SITI :busts_in_silhouette: Admin, Users
+## CREAZIONE SPAZIO SITI
+### tempo d'esecuzione: 3 min
 :warning: Lo spazio dei siti può essere creato dall'utente creato precedentemente da root
 >sudo mkdir /var/www/ SitoA
 >
@@ -154,7 +126,8 @@ controllare inserimento corretto per accesso unico alla cartella
 
 --------------------------------------------------------------------
 
-## CONTROLLO FILE APACHE2 :bust_in_silhouette: Admin
+## CONTROLLO FILE APACHE2
+### tempo d'esecuzione: 2 min
 :warning: controllare che vengano gestiti i file dentro apache2
 
 >cat cd /etc/apache2/apache2.conf
@@ -170,7 +143,8 @@ controllare inserimento corretto per accesso unico alla cartella
 
 ---------------------------------------------------------------------
 
-## CREAZIONE FILE DI CONFIGURAZIONE DEL SITO :bust_in_silhouette: Admin
+## CREAZIONE FILE DI CONFIGURAZIONE DEL SITO
+### tempo d'esecuzione: 10 min
 >cd /etc/apache2/sites-available
 >
 >sudo cp 000-deafult.conf 001-default.conf
@@ -188,9 +162,10 @@ controllare inserimento corretto per accesso unico alla cartella
 
 ---------------------------------------------------------------------
 
-## CREAZIONE SITO :busts_in_silhouette: Users -> Admin
+## CREAZIONE SITO
+### tempo d'esecuzione: 15 min
 
-dopo aver creato un file index.html nella cartella web dello spazio personale
+Dopo aver creato un file index.html nella cartella web dello spazio personale
 e dopo aver creato la cartella log (var/www/Sito/web e var/www/Sito/log):
 >systemctl reload apache2
 >
@@ -245,7 +220,65 @@ comandi utili:
   
 --------------------------------------------------------------------
 
-## CONFIGURAZIONE FTP :bust_in_silhouette: Admin
+## INSTALLAZIONE SAMBA
+### tempo d'esecuzione: 15 min
+Un file server Samba consente la condivisione di file tra diversi sistemi operativi su una rete.<br>
+Ti consente di accedere ai file del desktop da un laptop e di condividere file con utenti Windows e macOS.<br>
+<bR>
+Di cosa avremo bisogno:
+- Ubuntu 16.04 LTS
+- Una rete locale (LAN) su cui condividere file
+
+>sudo apt update
+>
+>sudo apt install samba
+>
+>whereis samba
+>
+
+L'output dovrebbe essere il seguente: :white_check_mark:
+>     samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
+>
+
+>mkdir /home/<username>/sambashare/
+>
+>sudo nano /etc/samba/smb.conf
+
+File di configurazione: 
+>     [sambashare]
+>
+>         comment = Samba on Ubuntu
+>
+>         path = /home/username/sambashare
+>
+>         read only = no
+>
+>         browsable = yes
+>
+
+>sudo service smbd restart
+>
+>sudo ufw allow samba
+>
+>sudo smbpasswd -a username
+>
+
+Su Ubuntu: apri il file manager predefinito e fai clic su Connetti al server, quindi inserisci:<br>
+>smb://ip-address/sambshare
+>
+
+Su macOS: nel menu Finder, fai clic su Vai> Connetti al server, quindi inserisci:<br>
+>smb://ip-address/sambshare
+>
+
+Su Windows, apri File Manager e modifica il percorso del file in:<br>
+>\\ip-address\sambashare
+>
+
+------------------------------------------------------------
+
+## CONFIGURAZIONE FTP
+### tempo d'esecuzione: 10 min
 :warning: configurare file vsftpd per usufruire dei comandi FTP da remoto<br>
 >sudo nano /etc/vsftpd.conf
 >
@@ -302,7 +335,8 @@ comandi utili:
 
 -------------------------------------------------------------
 
-## OPZIONALE :bust_in_silhouette: Admin windows
+## OPZIONALE
+### tempo d'esecuzione: 5 min
 :warning: se si usa configurazione DHCP4 e si dispone di Windows su macchina fisica
 >System32\drivers\etc\hosts
 >
