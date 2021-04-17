@@ -48,10 +48,19 @@ All'avvio l'hostname sarà cambiato
 >sudo apt install openssh-server
 >
 >sudo apt-get install vsftpd
+>
+>sudo apt-get install php
+>
+>sudo apt-get install php[version]-sqlite3
+>
 
 ### CHECKPOINT :white_check_mark: <br>
 controllare connettività dopo aver installato APACHE2
 >digitare ip su barra di ricerca nel browser
+>
+
+versione php
+>php -v
 >
 
 ---------------------------------------------------------------------
