@@ -40,6 +40,8 @@ All'avvio l'hostname sarà cambiato
 :warning: pacchetto APACHE2 per scaricare server APACHE2 con FileZilla<br>
 :warning: pacchetto OPENSSH-SERVER per comandi FTP con FileZilla<br>
 :warning: pacchetto VSFTPD per comandi FTP con FileZilla
+:warning: pacchetto PHP per eseguire file php<br>
+:warning: pacchetto driver sqlite con php
 
 >sudo apt update
 >
