@@ -39,9 +39,9 @@ All'avvio l'hostname sarà cambiato
 ### tempo d'esecuzione: 5 min
 :warning: pacchetto APACHE2 per scaricare server APACHE2 con FileZilla<br>
 :warning: pacchetto OPENSSH-SERVER per comandi FTP con FileZilla<br>
-:warning: pacchetto VSFTPD per comandi FTP con FileZilla
+:warning: pacchetto VSFTPD per comandi FTP con FileZilla<br>
 :warning: pacchetto PHP per eseguire file php<br>
-:warning: pacchetto driver sqlite con php
+:warning: pacchetto driver sqlite con php<br>
 
 >sudo apt update
 >
