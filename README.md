@@ -65,6 +65,13 @@ versione php
 >php -v
 >
 
+### CHECKPOINT :white_check_mark: <br>
+assegnare permessi scrittura sqlite per accesso web
+>sudo chgrp -R www-data /var/www/Sitoa/cartellaapplicazioneweb 
+>
+>sudo chmod -R g+rw /var/www/Sitoa/cartellaapplicazioneweb 
+>
+
 ---------------------------------------------------------------------
 
 ## CONFIGURAZIONE DI RETE
